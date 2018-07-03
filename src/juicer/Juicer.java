@@ -14,7 +14,7 @@ public class Juicer {
         this.bowl = Bowl.getInstance();
         this.fruitStrainer = new FruitStrainer();
         this.capacity = 30;
-        this.actions = 2;
+        this.actions = 100;
     }
 
     public void addFruit(Apple apple) throws PremasenKapacitetException {
