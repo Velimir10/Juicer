@@ -14,7 +14,7 @@ public class Juicer {
         this.bowl = Bowl.getInstance();
         this.fruitStrainer = new FruitStrainer();
         this.capacity = 30;
-        this.actions = 100;
+        this.actions = 2;
     }
 
     public void addFruit(Apple apple) throws PremasenKapacitetException {
@@ -22,7 +22,7 @@ public class Juicer {
         if (apple.getWeight() > capacity) {
             throw new PremasenKapacitetException("Premasen kapacitet");
         }
-        if (actions <= 0) {
+        if (actions == 0) {
             System.out.println("Ispunjen broj akcija");
             return;
         }
@@ -38,7 +38,7 @@ public class Juicer {
     }
 
     public void extract() {
-         if (actions <= 0) {
+         if (actions == 0) {
             System.out.println("Ispunjen broj akcija");
             return;
         }
